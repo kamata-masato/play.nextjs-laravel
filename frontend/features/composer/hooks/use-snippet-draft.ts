@@ -6,7 +6,7 @@ import { Routes } from "@/foundations/definitions";
 import { useToastStore } from "@/foundations/stores/toast";
 import { createSnippet } from "@/features/composer/actions/create-snippet";
 import { SnippetDraftDefaults } from "@/features/composer/definitions";
-import { type SnippetDraft } from "@/features/composer/schemas";
+import { SnippetDraft } from "@/features/composer/schemas";
 import { useValidation } from "./use-validation";
 
 /**
@@ -33,7 +33,7 @@ export const useSnippetDraft = () => {
     validateAll,
     validateField,
     setServerErrors,
-  } = useValidation();
+  } = useValidation(SnippetDraft);
 
   /**
    * 指定フィールドの値を更新し、リアルタイムバリデーションを実行する
