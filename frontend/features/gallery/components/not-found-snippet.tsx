@@ -1,6 +1,7 @@
 import { HelpReadme } from "@/foundations/components/help-readme";
+import { Routes } from "@/foundations/definitions";
 
-const NO_RESULTS_README = `# No Results Found
+const README_CONTENT = `# No Results Found
 
 > 条件に一致するスニペットがありません
 
@@ -11,7 +12,7 @@ const NO_RESULTS_README = `# No Results Found
 
 ## 関連リンク
 
-- [公開スニペット一覧](/snippets)
+- [公開スニペット一覧](${Routes.Snippets})
 
 ---
 
@@ -23,7 +24,7 @@ const NO_RESULTS_README = `# No Results Found
 export const NotFoundSnippet = () => (
   <div className="flex justify-center py-16">
     <div className="w-full max-w-2xl">
-      <HelpReadme content={NO_RESULTS_README} />
+      <HelpReadme content={README_CONTENT} />
     </div>
   </div>
 );
